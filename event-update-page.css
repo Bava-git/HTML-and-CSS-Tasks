@@ -1,0 +1,82 @@
+.image {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageContainer {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.eventDetailsContainer {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Container {
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.title {
+    text-align: center;
+}
+
+.seatAvailability {
+    text-align: center;
+}
+
+.attendeeDetails input {
+    width: 200px;
+    margin-left: 15px;
+}
+
+.labelsContainer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 365px;
+    margin: 10px;
+}
+
+.countofAttendees {
+    margin-right: 170px;
+    margin-left: 15px;
+}
+.buttonsContainer{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.cancelButton{
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+.bookButton{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}

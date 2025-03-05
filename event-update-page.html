@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event update page</title>
+    <link rel="stylesheet" href="event-update-page.css">
+</head>
+
+<body>
+    <div class="Container">
+        <h2 class="title">Event 1</h2>
+        <p class="seatAvailability" id="seatAvailability"></p>
+        <div class="eventDetailsContainer">
+            <div class="imageContainer">
+                <div class="image">
+                    Image
+                </div>
+            </div>
+            <!-- Get Attendee name, email, phone no and number of seats -->
+            <div class="attendeeDetails" id="attendeeDetails">
+                <div class="labelsContainer">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" autocomplete="name">
+                </div>
+                <div class="labelsContainer">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" autocomplete="email">
+                </div>
+                <div class="labelsContainer">
+                    <label for="phone">Phone No:</label>
+                    <input type="tel" name="phone" id="phone" autocomplete="tel">
+                </div>
+                <div class="labelsContainer">
+                    <label for="countofAttendees">Name of seats:</label>
+                    <select name="option" id="countofAttendees" class="countofAttendees">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="AdditionalAttendee" id="AdditionalAttendee"></div>
+                <div class="buttonsContainer">
+                    <button class="bookButton">Book</button>
+                    <button class="cancelButton">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="event-update-page.js"></script>
+
+</html>
