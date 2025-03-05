@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Survey Form</title>
+
+        <!-- importing the tailwindcss browser -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+        <!-- import the font from google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+        <form action="">
+        <div class="flex flex-col space-y-5 p-10">
+                <h1 class="text-2xl font-bold font-[Poppins]">Survey Form</h1>
+
+                <!-- Get user name -->
+                <div class="flex flex-col">
+                        <label for="text" class="font-bold font-[Poppins]">Name <span
+                                        class="text-red-600">*</span> </label>
+                        <div class="flex flex-row space-x-2">
+                                <input type="text" name="name" id="firstname" autocomplete="name" required
+                                        class="border-2 border-gray-300 rounded-sm">
+                                <input type="text" name="name" id="lastname" autocomplete="name" required
+                                        class="border-2 border-gray-300 rounded-sm">
+                        </div>
+                        <div class="flex flex-row space-x-42">
+                                <p>First</p>
+                                <p>Last</p>
+                        </div>
+                </div>
+
+                <!-- Get user email -->
+                <div class="flex flex-col">
+                        <label for="email" class="font-bold font-[Poppins]">Email <span
+                                        class="text-red-600">*</span> </label>
+                        <input type="email" name="email" id="email" autocomplete="email" required
+                                class="border-2 border-gray-300 rounded-sm w-96">
+                </div>
+
+                <!-- Get Experience Rating in stars -->
+                <div class="flex flex-col">
+                        <p class="font-bold font-[Poppins]">Your Experience <span class="text-red-600">*</span>
+                        </p>
+
+                        <div class="flex flex-row-reverse gap-2 justify-end items-center">
+                                <input type="radio" id="star5" name="rating" value="5" class="hidden peer"
+                                        required>
+                                <label for="star5" title="5 stars"
+                                        class="cursor-pointer text-gray-400 text-3xl peer-hover:text-yellow-400 peer-checked:text-yellow-400">★</label>
+
+                                <input type="radio" id="star4" name="rating" value="4" class="hidden peer"
+                                        required>
+                                <label for="star4" title="4 stars"
+                                        class="cursor-pointer text-gray-400 text-3xl peer-hover:text-yellow-400 peer-checked:text-yellow-400">★</label>
+
+                                <input type="radio" id="star3" name="rating" value="3" class="hidden peer"
+                                        required>
+                                <label for="star3" title="3 stars"
+                                        class="cursor-pointer text-gray-400 text-3xl peer-hover:text-yellow-400 peer-checked:text-yellow-400">★</label>
+
+                                <input type="radio" id="star2" name="rating" value="2" class="hidden peer"
+                                        required>
+                                <label for="star2" title="2 stars"
+                                        class="cursor-pointer text-gray-400 text-3xl peer-hover:text-yellow-400 peer-checked:text-yellow-400">★</label>
+
+                                <input type="radio" id="star1" name="rating" value="1" class="hidden peer"
+                                        required>
+                                <label for="star1" title="1 star"
+                                        class="cursor-pointer text-gray-400 text-3xl peer-hover:text-yellow-400 peer-checked:text-yellow-400">★</label>
+                        </div>
+                        <p class="text-xs">Overall, how would you rate you experience with us?</p>
+                </div>
+
+                <!-- Get user feedback about purchase, service and company overall -->
+                <div class="flex flex-col">
+                        <p class="font-bold font-[Poppins]">How satisfied are you with <span
+                                        class="text-red-600">*</span> </p>
+                        <table>
+                                <tr class="text-sm font-[Poppins] text-center">
+                                        <td class="w-95"></td>
+                                        <td class="pb-2"> Very Unsatisfied </td>
+                                        <td> Unsatisfied </td>
+                                        <td> Neutral </td>
+                                        <td> Satisfied </td>
+                                        <td> Very satisfied </td>
+                                </tr>
+                                <tr class="border border-gray-300 rounded-sm bg-gray-200  text-center">
+                                        <td class="w-95 text-start p-2">Purchase</td>
+                                        <td><input type="radio" name="purchase" id="Purchase-VeryUnsatisfied"
+                                                        value="P1" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="purchase" id="Purchase-Unsatisfied"
+                                                        value="P2" class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="purchase" id="Purchase-Neutral" value="P3"
+                                                        class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="purchase" id="Purchase-Satisfied"
+                                                        value="P4" class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="purchase" id="Purchase-VerySatisfied"
+                                                        value="P5" class="h-5 w-5 cursor-pointer" required></td>
+                                </tr>
+                                <tr class="border border-gray-300 rounded-sm  text-center">
+                                        <td class="w-95 text-start p-2">Service</td>
+                                        <td><input type="radio" name="service" id="Service-VeryUnsatisfied"
+                                                        value="S1" class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="service" id="Service-Unsatisfied"
+                                                        value="S2" class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="service" id="Service-Neutral" value="S3"
+                                                        class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="service" id="Service-Satisfied" value="S4"
+                                                        class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="service" id="Service-VerySatisfied"
+                                                        value="S5" class="h-5 w-5 cursor-pointer" required></td>
+                                </tr>
+                                <tr class="border border-gray-300 rounded-sm bg-gray-200  text-center">
+                                        <td class="w-95 text-start p-2">Company Overall</td>
+                                        <td><input type="radio" name="company" id="Company-VeryUnsatisfied"
+                                                        value="C1" class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="company" id="Company-Unsatisfied"
+                                                        value="C2" class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="company" id="Company-VeryUnsatisfied"
+                                                        value="C3" class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="company" id="Company-Satisfied" value="C4"
+                                                        class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="company" id="Company-VerySatisfied"
+                                                        value="C5" class="h-5 w-5 cursor-pointer" required></td>
+                                </tr>
+                        </table>
+                </div>
+
+                <!-- Get user feedback about product -->
+                <div class="flex flex-col">
+                        <p class="font-bold font-[Poppins]">How likely are you to <span
+                                        class="text-red-600">*</span> </p>
+                        <table>
+                                <tr class="text-sm font-[Poppins] text-center">
+                                        <td class="w-95"></td>
+                                        <td class="pb-2">Very Unlikely </td>
+                                        <td> Unlikely </td>
+                                        <td> Neutral </td>
+                                        <td> Likely </td>
+                                        <td> Very likely </td>
+                                </tr>
+                                <tr class="border border-gray-300 rounded-sm bg-gray-200  text-center">
+                                        <td class="w-95 text-start p-2">Buy from us again</td>
+                                        <td><input type="radio" name="purchase" id="BuyAgain-VeryUnlikely"
+                                                        value="BA1" class="h-5 w-5 cursor-pointer">
+                                        </td>
+                                        <td><input type="radio" name="purchase" id="BuyAgain-Unlikely"
+                                                        value="BA2" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="purchase" id="BuyAgain-Neutral"
+                                                        value="BA3" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="purchase" id="BuyAgain-likely" value="BA4"
+                                                        class="h-5 w-5 cursor-pointer" required></td>
+                                        <td><input type="radio" name="purchase" id="BuyAgain-Verylikely"
+                                                        value="BA5" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                </tr>
+                                <tr class="border border-gray-300 rounded-sm  text-center">
+                                        <td class="w-95 text-start p-2">Recommend our product to others</td>
+                                        <td><input type="radio" name="service" id="ProductRecom-VeryUnlikely"
+                                                        value="PR1" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="service" id="ProductRecom-Unlikely"
+                                                        value="PR2" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="service" id="ProductRecom-Neutral"
+                                                        value="PR3" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="service" id="ProductRecomlikely"
+                                                        value="PR4" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="service" id="ProductRecom-Verylikely"
+                                                        value="PR5" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                </tr>
+                                <tr class="border border-gray-300 rounded-sm bg-gray-200  text-center">
+                                        <td class="w-95 text-start p-2">Recommend our company to others</td>
+                                        <td><input type="radio" name="company" id="CompanyRecom-VeryUnlikely"
+                                                        value="CR1" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="company" id="CompanyRecom-Unlikely"
+                                                        value="CR2" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="company" id="CompanyRecom-Neutral"
+                                                        value="CR3" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="company" id="CompanyRecom-likely"
+                                                        value="CR4" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                        <td><input type="radio" name="company" id="CompanyRecom-Verylikely"
+                                                        value="CR5" class="h-5 w-5 cursor-pointer" required>
+                                        </td>
+                                </tr>
+                        </table>
+                </div>
+
+                <!-- Get suggestions -->
+                <div class="flex flex-col">
+                        <p class="font-bold font-[Poppins]">Additional comments or suggestions</p>
+                        <textarea name="comments" id="comments" cols="30" rows="5"
+                                class="border-2 border-gray-300 rounded-sm"></textarea>
+                </div>
+
+                <div class="flex justify-end">
+                        <button
+                                class="bg-blue-500 text-white font-bold font-[Poppins] rounded-sm p-2 w-50 cursor-pointer hover:bg-blue-400">Submit</button>
+                </div>
+        </div>
+        </form>
+</body>
+
+</html>
